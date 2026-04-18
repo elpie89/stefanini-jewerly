@@ -1,0 +1,62 @@
+<header id="site-header" class="{{ page.header_class | default: 'site-header header-v1' }}">
+    <!-- Mobile top bar -->
+    <div class="header-mobile">
+        <div class="section-padding">
+            <div class="section-container">
+                <div class="row">
+                    <div class="col-sm-3 col-3 header-left">
+                        <div class="navbar-header">
+                            <button type="button" id="show-megamenu" class="navbar-toggle"></button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6 header-center">
+                        <div class="site-logo">
+                            <a href="{{ '/' | relative_url }}">
+                                <img width="400" height="79" src="{{ page.header_logo | default: '/media/logo.png' | relative_url }}" alt="{{ site.title }}">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-3 header-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="header-desktop">
+        <div class="header-wrapper">
+            <div class="section-padding">
+                <div class="section-container large p-l-r">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 header-left">
+                            <div class="site-logo">
+                                <a href="{{ '/' | relative_url }}">
+                                    <img width="400" height="140" src="{{ page.header_logo | default: '/media/logo.png' | relative_url }}" alt="{{ site.title }}">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 text-center header-center">
+                            <div class="site-navigation">
+                                <nav id="main-navigation">
+                                    {%- assign url = page.url | default: '/' -%}
+                                    <ul id="menu-main-menu" class="menu">
+                                        <li class="level-0 menu-item{% if url == '/' %} current-menu-item{% endif %}">
+                                            <a href="{{ '/' | relative_url }}"><span class="menu-item-text">Home</span></a>
+                                        </li>
+                                        <li class="level-0 menu-item{% if url contains 'about' %} current-menu-item{% endif %}">
+                                            <a href="{{ '/about.html' | relative_url }}"><span class="menu-item-text">About</span></a>
+                                        </li>
+                                        <li class="level-0 menu-item{% if url contains 'contact' %} current-menu-item{% endif %}">
+                                            <a href="{{ '/contact.html' | relative_url }}"><span class="menu-item-text">Contact</span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

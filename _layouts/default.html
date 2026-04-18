@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+{%- include head.html -%}
+<body class="{{ page.body_class | default: 'page' }}">
+    <div id="page" class="hfeed page-wrapper">
+        {%- include header.html -%}
+
+        <div id="site-main" class="site-main">
+            <div id="main-content" class="main-content">
+                <div id="primary" class="content-area">
+                    {%- if page.show_title_bar -%}
+                    <div id="title" class="page-title">
+                        <div class="section-container">
+                            <div class="content-title-heading">
+                                <h1 class="text-title-heading">{{ page.title }}</h1>
+                            </div>
+                            <div class="breadcrumbs">
+                                <a href="{{ '/' | relative_url }}">Home</a><span class="delimiter"></span>{{ page.title }}
+                            </div>
+                        </div>
+                    </div>
+                    {%- endif -%}
+                    <div id="content" class="site-content" role="main">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {%- include footer.html -%}
+    </div>
+
+    <!-- Back to top -->
+    <div class="back-top button-show">
+        <i class="arrow_carrot-up"></i>
+    </div>
+
+    <!-- Page Loader -->
+    <div class="page-preloader">
+        <div class="loader">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    {%- include scripts.html -%}
+</body>
+</html>

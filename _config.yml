@@ -1,0 +1,23 @@
+title: Stefanini Jewelry
+description: Handcrafted jewelry — a family-run atelier.
+author: Stefanini Jewelry
+
+url: https://elpie89.github.io
+baseurl: /stefanini-jewerly
+
+lang: en
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - README.md
+  - CLAUDE.md
+  - stefani-jewerly.code-workspace
+  - node_modules
+
+keep_files:
+  - assets
+  - libs
+  - media
