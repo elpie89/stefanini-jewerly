@@ -1592,3 +1592,11 @@
     font-size: 12px;
   }
 }
+
+/* Parallax hero: background-attachment: fixed breaks sizing on iOS/mobile
+   (image gets scaled to document height, causing extreme zoom). */
+@media (max-width: 991px) {
+  .block-parallax {
+    background-attachment: scroll;
+  }
+}
