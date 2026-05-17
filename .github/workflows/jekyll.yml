@@ -23,6 +23,9 @@ jobs:
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
+        env:
+          BUNDLE_FROZEN: "false"
+          BUNDLE_DEPLOYMENT: "false"
         with:
           ruby-version: "3.2"
           bundler-cache: true
