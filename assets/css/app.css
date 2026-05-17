@@ -1825,8 +1825,11 @@ ul.slick-dots li.slick-active button {
   margin: 0;
 }
 .site-header .site-logo img {
-  max-height: 32px;
+  max-height: 128px;
   width: auto;
+}
+.site-header.color-white .site-logo img {
+  filter: brightness(0) invert(1);
 }
 .site-header .header-mobile .header-right {
   display: flex;
