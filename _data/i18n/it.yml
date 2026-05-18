@@ -50,7 +50,7 @@ not_found:
 contact:
   meta_title: "Contatti"
   meta_description: "Mettiti in contatto con Stefanini Jewellery."
-  locations_title: "Le nostre destinazioni"
+  locations_title: "I nostri negozi"
   locations_intro: "Stefanini Jewellery segue il ritmo delle stagioni, scegliendo luoghi che riflettono la nostra visione di eleganza e bellezza."
   summer:
     title: "Estate &mdash; Porto Cervo"
@@ -65,7 +65,7 @@ contact:
   closing: "Due luoghi iconici, una sola visione."
   form:
     title: "Scrivici!"
-    subtitle: "Ti risponderemo entro due giorni."
+    subtitle: "Ti risponderemo il prima possibile."
     name: "Nome"
     email: "Email"
     message: "Messaggio"

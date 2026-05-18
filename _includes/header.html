@@ -12,7 +12,7 @@
                     </div>
                     <div class="col-sm-6 col-6 header-center">
                         <div class="site-logo">
-                            <a href="{{ '/' | relative_url }}">
+                            <a href="{{ lang_base }}/">
                                 <img width="400" height="79" src="{{ page.header_logo | default: '/media/logo.png' | relative_url }}" alt="{{ site.title }}">
                             </a>
                         </div>
@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 header-left">
                             <div class="site-logo">
-                                <a href="{{ '/' | relative_url }}">
+                                <a href="{{ lang_base }}/">
                                     <img width="400" height="140" src="{{ page.header_logo | default: '/media/logo.png' | relative_url }}" alt="{{ site.title }}">
                                 </a>
                             </div>
@@ -47,13 +47,13 @@
                                     {%- assign url = page.url | default: '/' -%}
                                     <ul id="menu-main-menu" class="menu">
                                         <li class="level-0 menu-item{% if url == '/' or url == '/it/' %} current-menu-item{% endif %}">
-                                            <a href="{{ '/' | relative_url }}"><span class="menu-item-text">{{ t.nav.home }}</span></a>
+                                            <a href="{{ lang_base }}/"><span class="menu-item-text">{{ t.nav.home }}</span></a>
                                         </li>
                                         <li class="level-0 menu-item{% if url contains 'about' %} current-menu-item{% endif %}">
-                                            <a href="{{ '/about.html' | relative_url }}"><span class="menu-item-text">{{ t.nav.about }}</span></a>
+                                            <a href="{{ lang_base }}/about.html"><span class="menu-item-text">{{ t.nav.about }}</span></a>
                                         </li>
                                         <li class="level-0 menu-item{% if url contains 'contact' %} current-menu-item{% endif %}">
-                                            <a href="{{ '/contact.html' | relative_url }}"><span class="menu-item-text">{{ t.nav.contact }}</span></a>
+                                            <a href="{{ lang_base }}/contact.html"><span class="menu-item-text">{{ t.nav.contact }}</span></a>
                                         </li>
                                         <li class="level-0 menu-item lang-switch">
                                             <a href="{{ other_url }}"><img class="lang-flag" src="{{ '/media/flags/' | append: other_lang | append: '.svg' | relative_url }}" alt="{{ other_lang | upcase }}" width="24" height="16"></a>
