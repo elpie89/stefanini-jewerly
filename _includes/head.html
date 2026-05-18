@@ -3,8 +3,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    {% if page.description or site.description %}<meta name="description" content="{{ page.description | default: site.description }}">{% endif %}
+    {% include lang.html %}
+    {%- if page.i18n_key -%}{%- assign page_t = t[page.i18n_key] -%}{%- endif -%}
+    {%- assign meta_title = page_t.meta_title | default: page.title -%}
+    {%- assign meta_desc = page_t.meta_description | default: page.description | default: site.description -%}
+    <title>{% if meta_title %}{{ meta_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% if meta_desc %}<meta name="description" content="{{ meta_desc }}">{% endif %}
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ '/media/favicon/favicon.ico' | relative_url }}">

@@ -1831,6 +1831,32 @@ ul.slick-dots li.slick-active button {
 .site-header.color-white .site-logo img {
   filter: brightness(0) invert(1);
 }
+.lang-switcher {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu-item.lang-switch {
+  margin-left: 20px;
+}
+.lang-flag {
+  display: inline-block;
+  width: 24px;
+  height: 16px;
+  vertical-align: middle;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.lang-flag:hover {
+  opacity: 1;
+}
+.site-header.color-white .lang-flag {
+  border-color: rgba(255, 255, 255, 0.4);
+}
 .site-header .header-mobile .header-right {
   display: flex;
   justify-content: flex-end;
@@ -5620,7 +5646,7 @@ body.home.title-6 .block-newsletter .newsletter-title {
   background-position: top center;
 }
 .block-parallax.bg-img-1 {
-  background-image: url(../../media/banner/parallax-bg-1.jpg);
+  background-image: url(../../media/banner/parallax-bg-4.jpg);
 }
 .block-parallax.bg-img-2 {
   background-image: url(../../media/banner/parallax-bg-2.jpg);
@@ -5629,7 +5655,38 @@ body.home.title-6 .block-newsletter .newsletter-title {
   background-image: url(../../media/banner/parallax-bg-3.jpg);
 }
 .block-parallax.bg-img-4 {
-  background-image: url(../../media/banner/parallax-bg-4.jpg);
+  background-image: url(../../media/banner/parallax-bg-1.jpg);
+}
+@media (min-width: 992px) {
+  .block-parallax {
+    background-attachment: scroll;
+  }
+  .block-parallax.bg-img-1 {
+    background-image: url(../../media/banner/parallax-bg-1-desktop.png);
+  }
+  .block-parallax.bg-img-2 {
+    background-image: url(../../media/banner/parallax-bg-2-desktop.png);
+  }
+  .block-parallax.bg-img-3 {
+    background-image: url(../../media/banner/parallax-bg-3-desktop.png);
+  }
+  .block-parallax.bg-img-4 {
+    background-image: url(../../media/banner/parallax-bg-4-desktop.png);
+  }
+}
+@media (min-aspect-ratio: 2/1) {
+  .block-parallax.bg-img-1 {
+    background-image: url(../../media/banner/parallax-bg-1-ultrawide.png);
+  }
+  .block-parallax.bg-img-2 {
+    background-image: url(../../media/banner/parallax-bg-2-ultrawide.png);
+  }
+  .block-parallax.bg-img-3 {
+    background-image: url(../../media/banner/parallax-bg-3-ultrawide.png);
+  }
+  .block-parallax.bg-img-4 {
+    background-image: url(../../media/banner/parallax-bg-4-ultrawide.png);
+  }
 }
 .block-parallax .content {
   padding: 0 15px;

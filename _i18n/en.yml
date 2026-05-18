@@ -1,0 +1,5 @@
+# Stub file required by jekyll-multiple-languages-plugin.
+# Actual translations live in _data/i18n/en.yml and are accessed via
+# site.data.i18n[active] in templates — this lets us loop over arrays
+# (hero blocks, paragraphs) which the plugin's {% t %} tag can't do.
+_stub: true

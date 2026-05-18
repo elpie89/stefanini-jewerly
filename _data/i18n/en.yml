@@ -1,0 +1,72 @@
+nav:
+  home: Home
+  about: About
+  contact: Contact
+
+footer:
+  copyright: "All Rights Reserved."
+
+home:
+  scroll_down: "Scroll Down"
+  blocks:
+    - title: "A Jewel Is a <br>Bespoke Work of Art"
+      description: "Shapes, colors, and volumes come together to create unique pieces designed to express identity."
+      cta: "Create Your Jewel"
+    - title: "Personal, <br>One of a Kind"
+      description: "Every creation begins with a dialogue. Nothing is standard &mdash; every detail is designed to create harmony, character, and presence."
+      cta: "Create Your Jewel"
+    - title: "Bespoke <br>Experience"
+      description: "From the initial idea to the final piece, a private and intimate journey where time slows down and every detail matters."
+      cta: "Book a Consultation"
+    - title: "Material, <br>Color, Form"
+      description: "Diamonds and gemstones selected for their uniqueness. Volumes shaped to create balance and presence."
+      cta: "Create Your Jewel"
+
+about:
+  meta_title: "About Us"
+  meta_description: "The story of Stefanini Jewellery — our atelier, our craft, our people."
+  intro1:
+    title: "About Us"
+    paragraphs:
+      - "Stefanini Jewellery was founded in 2023 on a simple idea: every jewel is a work of art."
+      - "And like any work of art, it is shaped by a vision.<br>Ours is to listen and give form to the desires of the person who wears it."
+  intro2:
+    title: "Our Clients<br> Are The True Artists"
+    paragraphs:
+      - "We provide materials, expertise, and craftsmanship. They bring identity and meaning."
+      - "Customization is at the heart of what we do: every detail, from gemstone color to volume, is designed to reflect a person."
+  intro3:
+    title: "Made In Italy,<br> Worn Around The World"
+    paragraphs:
+      - "All our jewelry is entirely made in Italy, combining craftsmanship with a contemporary approach."
+      - "We are based in Sardinia during the summer and in Switzerland during the winter, following the rhythm of the seasons and our clients."
+
+not_found:
+  meta_title: "Page Not Found"
+  subtitle: "Oops! That page can&rsquo;t be found."
+  body: "We&rsquo;re really sorry but we can&rsquo;t seem to find the page you were looking for."
+  back: "Back to Homepage"
+
+contact:
+  meta_title: "Contact Us"
+  meta_description: "Get in touch with Stefanini Jewellery."
+  locations_title: "Our Locations"
+  locations_intro: "Stefanini Jewellery follows the rhythm of the seasons, choosing destinations that reflect our vision of elegance and beauty."
+  summer:
+    title: "Summer &mdash; Porto Cervo"
+    paragraphs:
+      - "Since 2023, we have been present in Porto Cervo, at the prestigious Promenade du Port in the heart of Costa Smeralda."
+      - "A vibrant and sophisticated destination that represents our ideal summer setting."
+  winter:
+    title: "Winter &mdash; Gstaad"
+    paragraphs:
+      - "In winter, we move to Gstaad, within the Palace Hotel."
+      - "A timeless, intimate and refined environment that perfectly embodies the spirit of Stefanini Jewellery."
+  closing: "Two iconic locations, one vision."
+  form:
+    title: "Send Us Your Questions!"
+    subtitle: "We&rsquo;ll get back to you within two days."
+    name: "Name"
+    email: "Email"
+    message: "Message"
+    submit: "Submit"

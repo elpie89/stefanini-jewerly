@@ -7,82 +7,37 @@ header_class: site-header header-v1 color-white
 header_logo: /media/logo-white.png
 ---
 
-<section class="section m-b-0">
-    <!-- Block Parallax -->
-    <div class="block block-parallax bg-img-1 bg-top-center">
+{% include lang.html %}
+{%- assign bgs = "bg-img-1 bg-top-center,bg-img-2 right-text,bg-img-3 bg-top-center,bg-img-4 right-text" | split: "," -%}
+
+{% for block in t.home.blocks %}
+{%- assign bg = bgs[forloop.index0] -%}
+{%- assign is_right = false -%}{%- if bg contains "right-text" -%}{%- assign is_right = true -%}{%- endif -%}
+<section class="section m-b-0"{% if forloop.index == 2 %} id="section-2"{% endif %}>
+    <div class="block block-parallax {{ bg }}">
         <div class="section-container">
             <div class="row">
+                {% if is_right %}<div class="col-md-6"></div>{% endif %}
                 <div class="col-md-6">
                     <div class="content">
-                        <h2 class="title">A Jewel Is a <br>Bespoke Work of Art</h2>
-                        <div class="description">Shapes, colors, and volumes come together to create unique pieces designed to express identity.</div>
-                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="{{ '/contact.html' | relative_url }}">Create Your Jewel</a>
+                        <h2 class="title">{{ block.title }}</h2>
+                        <div class="description">{{ block.description }}</div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="{{ '/contact.html' | relative_url }}">{{ block.cta }}</a>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                {% unless is_right %}<div class="col-md-6"></div>{% endunless %}
             </div>
         </div>
+        {% if forloop.first %}
         <div class="go-to-section">
             <div class="go-to-button">
-                <a class="scroll-button" href="#section-2">Scroll Down</a>
+                <a class="scroll-button" href="#section-2">{{ t.home.scroll_down }}</a>
             </div>
             <div class="go-to-text">
-                <a class="scroll-button" href="#section-2">Scroll Down</a>
+                <a class="scroll-button" href="#section-2">{{ t.home.scroll_down }}</a>
             </div>
         </div>
+        {% endif %}
     </div>
 </section>
-
-<section class="section m-b-0" id="section-2">
-    <!-- Block Parallax -->
-    <div class="block block-parallax bg-img-2 right-text">
-        <div class="section-container">
-            <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
-                    <div class="content">
-                        <h2 class="title">Personal, <br>One of a Kind</h2>
-                        <div class="description">Every creation begins with a dialogue. Nothing is standard &mdash; every detail is designed to create harmony, character, and presence.</div>
-                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="{{ '/contact.html' | relative_url }}">Create Your Jewel</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section m-b-0">
-    <!-- Block Parallax -->
-    <div class="block block-parallax bg-img-3 bg-top-center">
-        <div class="section-container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="content">
-                        <h2 class="title">Bespoke <br>Experience</h2>
-                        <div class="description">From the initial idea to the final piece, a private and intimate journey where time slows down and every detail matters.</div>
-                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="{{ '/contact.html' | relative_url }}">Book a Consultation</a>
-                    </div>
-                </div>
-                <div class="col-md-6"></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section m-b-0">
-    <!-- Block Parallax -->
-    <div class="block block-parallax bg-img-4 right-text">
-        <div class="section-container">
-            <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
-                    <div class="content">
-                        <h2 class="title">Material, <br>Color, Form</h2>
-                        <div class="description">Diamonds and gemstones selected for their uniqueness. Volumes shaped to create balance and presence.</div>
-                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="{{ '/contact.html' | relative_url }}">Create Your Jewel</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{% endfor %}

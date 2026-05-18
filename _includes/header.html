@@ -1,3 +1,4 @@
+{% include lang.html %}
 <header id="site-header" class="{{ page.header_class | default: 'site-header header-v1' }}">
     <!-- Mobile top bar -->
     <div class="header-mobile">
@@ -16,7 +17,11 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-3 header-right"></div>
+                    <div class="col-sm-3 col-3 header-right">
+                        <ul class="lang-switcher">
+                            <li><a href="{{ other_url }}" aria-label="{{ other_lang | upcase }}"><img class="lang-flag" src="{{ '/media/flags/' | append: other_lang | append: '.svg' | relative_url }}" alt="{{ other_lang | upcase }}" width="24" height="16"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,14 +46,17 @@
                                 <nav id="main-navigation">
                                     {%- assign url = page.url | default: '/' -%}
                                     <ul id="menu-main-menu" class="menu">
-                                        <li class="level-0 menu-item{% if url == '/' %} current-menu-item{% endif %}">
-                                            <a href="{{ '/' | relative_url }}"><span class="menu-item-text">Home</span></a>
+                                        <li class="level-0 menu-item{% if url == '/' or url == '/it/' %} current-menu-item{% endif %}">
+                                            <a href="{{ '/' | relative_url }}"><span class="menu-item-text">{{ t.nav.home }}</span></a>
                                         </li>
                                         <li class="level-0 menu-item{% if url contains 'about' %} current-menu-item{% endif %}">
-                                            <a href="{{ '/about.html' | relative_url }}"><span class="menu-item-text">About</span></a>
+                                            <a href="{{ '/about.html' | relative_url }}"><span class="menu-item-text">{{ t.nav.about }}</span></a>
                                         </li>
                                         <li class="level-0 menu-item{% if url contains 'contact' %} current-menu-item{% endif %}">
-                                            <a href="{{ '/contact.html' | relative_url }}"><span class="menu-item-text">Contact</span></a>
+                                            <a href="{{ '/contact.html' | relative_url }}"><span class="menu-item-text">{{ t.nav.contact }}</span></a>
+                                        </li>
+                                        <li class="level-0 menu-item lang-switch">
+                                            <a href="{{ other_url }}"><img class="lang-flag" src="{{ '/media/flags/' | append: other_lang | append: '.svg' | relative_url }}" alt="{{ other_lang | upcase }}" width="24" height="16"></a>
                                         </li>
                                     </ul>
                                 </nav>

@@ -1,11 +1,12 @@
 ---
 layout: default
-title: About Us
-description: The story of Stefanini Jewellery — our atelier, our craft, our people.
 body_class: page
 show_title_bar: false
+i18n_key: about
 ---
 
+{% include lang.html %}
+{%- assign page_t = t.about -%}
 <div class="page-about-us">
     <section class="section section-padding m-t-20 m-b-70">
         <div class="section-container">
@@ -58,10 +59,9 @@ show_title_bar: false
             <div class="block block-intro layout-5 text-center">
                 <div class="block-widget-wrap">
                     <div class="intro-wrap">
-                        <h2 class="intro-title">About Us</h2>
+                        <h2 class="intro-title">{{ page_t.intro1.title }}</h2>
                         <div class="intro-text">
-                            <p>Stefanini Jewellery was founded in 2023 on a simple idea: every jewel is a work of art.</p>
-                            <p>And like any work of art, it is shaped by a vision.<br>Ours is to listen and give form to the desires of the person who wears it.</p>
+                            {% for p in page_t.intro1.paragraphs %}<p>{{ p }}</p>{% endfor %}
                         </div>
                     </div>
                 </div>
@@ -77,10 +77,9 @@ show_title_bar: false
                     <div class="row">
                         <div class="section-column left">
                             <div class="intro-wrap">
-                                <h2 class="intro-title">Our Clients<br> Are The True Artists</h2>
+                                <h2 class="intro-title">{{ page_t.intro2.title }}</h2>
                                 <div class="intro-item m-b-0">
-                                    <p>We provide materials, expertise, and craftsmanship. They bring identity and meaning.</p>
-                                    <p>Customization is at the heart of what we do: every detail, from gemstone color to volume, is designed to reflect a person.</p>
+                                    {% for p in page_t.intro2.paragraphs %}<p>{{ p }}</p>{% endfor %}
                                 </div>
                             </div>
                         </div>
@@ -115,10 +114,9 @@ show_title_bar: false
                         </div>
                         <div class="section-column right">
                             <div class="intro-wrap">
-                                <h2 class="intro-title">Made In Italy,<br> Worn Around The World</h2>
+                                <h2 class="intro-title">{{ page_t.intro3.title }}</h2>
                                 <div class="intro-item m-b-0">
-                                    <p>All our jewelry is entirely made in Italy, combining craftsmanship with a contemporary approach.</p>
-                                    <p>We are based in Sardinia during the summer and in Switzerland during the winter, following the rhythm of the seasons and our clients.</p>
+                                    {% for p in page_t.intro3.paragraphs %}<p>{{ p }}</p>{% endfor %}
                                 </div>
                             </div>
                         </div>

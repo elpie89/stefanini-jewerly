@@ -21,7 +21,8 @@
         <div class="section-padding">
             <div class="section-container">
                 <div class="block-widget-wrap">
-                    <p class="copyright text-center">Copyright &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All Rights Reserved.</p>
+                    {% include lang.html %}
+                    <p class="copyright text-center">Copyright &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. {{ t.footer.copyright }}</p>
                 </div>
             </div>
         </div>

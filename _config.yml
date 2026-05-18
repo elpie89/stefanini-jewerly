@@ -7,6 +7,13 @@ baseurl: /stefanini-jewerly
 
 lang: en
 
+languages: ["en", "it"]
+default_lang: "en"
+exclude_from_localization: ["media", "assets", "libs", ".github", "CLAUDE.md", "README.md"]
+
+plugins:
+  - jekyll-multiple-languages-plugin
+
 exclude:
   - Gemfile
   - Gemfile.lock
