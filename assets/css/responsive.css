@@ -1,4 +1,4 @@
-@media (max-width: 1510px) and (min-width: 1200px) {
+﻿@media (max-width: 1510px) and (min-width: 1200px) {
   .quickview-notices-wrapper {
     padding-left: 15px;
     padding-right: 15px;
@@ -427,7 +427,7 @@
     text-align: right;
     display: block;
     padding: 0;
-    background: #cb8161;
+    background: #000000;
     padding: 10px 20px 20px;
     color: #fff;
     text-transform: uppercase;
@@ -549,7 +549,7 @@
   }
   .site-mobile-navigation .mm-menu .mm-navbar a, 
   .site-mobile-vertical .mm-menu .mm-navbar a {
-    color: #cb8161;
+    color: #000000;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
