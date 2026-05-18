@@ -5645,6 +5645,12 @@ body.home.title-6 .block-newsletter .newsletter-title {
   padding: 320px 15px 450px 15px;
   position: relative;
 }
+@media (max-width: 991px) {
+  .home .block-parallax {
+    padding-top: 20px;
+    padding-bottom: 650px;
+  }
+}
 .block-parallax.bg-top-center {
   background-position: top center;
 }
