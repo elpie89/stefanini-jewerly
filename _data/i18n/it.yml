@@ -1,0 +1,72 @@
+nav:
+  home: Home
+  about: Chi siamo
+  contact: Contatti
+
+footer:
+  copyright: "Tutti i diritti riservati."
+
+home:
+  scroll_down: "Scorri"
+  blocks:
+    - title: "Un gioiello &egrave; <br>un&rsquo;opera d&rsquo;arte su misura"
+      description: "Forme, colori e volumi si incontrano per dare vita a creazioni uniche, pensate per esprimere identit&agrave;."
+      cta: "Crea il tuo gioiello"
+    - title: "Personale, <br>irripetibile"
+      description: "Ogni creazione nasce da un dialogo. Nulla &egrave; standard &mdash; ogni dettaglio &egrave; studiato per creare armonia, carattere e presenza."
+      cta: "Crea il tuo gioiello"
+    - title: "Bespoke <br>Experience"
+      description: "Dall&rsquo;idea iniziale alla realizzazione finale, un percorso intimo e riservato dove il tempo rallenta e ogni dettaglio acquista significato."
+      cta: "Prenota una consulenza"
+    - title: "Materia, <br>Colore, Forma"
+      description: "Diamanti e pietre preziose selezionati per la loro unicit&agrave;. Volumi modellati per creare equilibrio e presenza."
+      cta: "Crea il tuo gioiello"
+
+about:
+  meta_title: "Chi siamo"
+  meta_description: "La storia di Stefanini Jewellery &mdash; il nostro atelier, la nostra manifattura, le nostre persone."
+  intro1:
+    title: "Chi siamo"
+    paragraphs:
+      - "Stefanini Jewellery nasce nel 2023 da un&rsquo;idea essenziale: ogni gioiello &egrave; un&rsquo;opera d&rsquo;arte."
+      - "E come ogni opera, prende forma da una visione.<br>La nostra &egrave; quella di ascoltare e dare forma ai desideri di chi lo indossa."
+  intro2:
+    title: "I nostri clienti<br> sono i veri artisti"
+    paragraphs:
+      - "Noi mettiamo materia, esperienza e sensibilit&agrave;. Loro danno identit&agrave; e significato."
+      - "La customizzazione &egrave; il cuore del nostro lavoro: ogni dettaglio, dal colore delle pietre ai volumi, &egrave; pensato per riflettere una persona."
+  intro3:
+    title: "Made in Italy,<br> indossato nel mondo"
+    paragraphs:
+      - "Tutti i gioielli sono interamente realizzati in Italia, espressione di una manifattura attenta, contemporanea e senza compromessi."
+      - "Siamo in Sardegna durante l&rsquo;estate e in Svizzera durante l&rsquo;inverno, seguendo il ritmo delle stagioni e dei nostri clienti."
+
+not_found:
+  meta_title: "Pagina non trovata"
+  subtitle: "Oops! Questa pagina non esiste."
+  body: "Ci dispiace, non riusciamo a trovare la pagina che stavi cercando."
+  back: "Torna alla home"
+
+contact:
+  meta_title: "Contatti"
+  meta_description: "Mettiti in contatto con Stefanini Jewellery."
+  locations_title: "I nostri negozi"
+  locations_intro: "Stefanini Jewellery segue il ritmo delle stagioni, scegliendo luoghi che riflettono la nostra visione di eleganza e bellezza."
+  summer:
+    title: "Estate &mdash; Porto Cervo"
+    paragraphs:
+      - "Dal 2023 siamo presenti a Porto Cervo, nella prestigiosa Promenade du Port, nel cuore della Costa Smeralda."
+      - "Un luogo unico, vibrante e sofisticato, che rappresenta per noi la destinazione ideale per la stagione estiva."
+  winter:
+    title: "Inverno &mdash; Gstaad"
+    paragraphs:
+      - "Durante l&rsquo;inverno ci trasferiamo a Gstaad, all&rsquo;interno del Palace Hotel."
+      - "Un ambiente senza tempo, intimo e raffinato, che incarna perfettamente lo spirito di Stefanini Jewellery."
+  closing: "Due luoghi iconici, una sola visione."
+  form:
+    title: "Scrivici!"
+    subtitle: "Ti risponderemo il prima possibile."
+    name: "Nome"
+    email: "Email"
+    message: "Messaggio"
+    submit: "Invia"

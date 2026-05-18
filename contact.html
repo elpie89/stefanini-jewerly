@@ -1,18 +1,19 @@
 ---
 layout: default
-title: Contact Us
-description: Get in touch with Stefanini Jewelry.
 body_class: page
-show_title_bar: true
+show_title_bar: false
+i18n_key: contact
 ---
 
+{% include lang.html %}
+{%- assign page_t = t.contact -%}
 <div class="page-contact">
     <section class="section section-padding">
         <div class="section-container small">
             <!-- Block Contact Map -->
             <div class="block block-contact-map">
                 <div class="block-widget-wrap">
-                    <iframe src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" aria-label="Shop location"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=Promenade%20du%20Port%2C%20Via%20Aga%20Khan%201%2C%2007021%20Porto%20Cervo%20OT%2C%20Italy&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" aria-label="Shop location" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -24,43 +25,33 @@ show_title_bar: true
             <div class="block block-contact-info">
                 <div class="block-widget-wrap">
                     <div class="info-title">
-                        <h2>Get in Touch</h2>
+                        <h2>{{ page_t.locations_title }}</h2>
+                        <p>{{ page_t.locations_intro }}</p>
                     </div>
                     <div class="info-items">
                         <div class="row">
-                            <div class="col-md-4 sm-m-b-30">
+                            <div class="col-md-6 sm-m-b-30">
                                 <div class="info-item">
                                     <div class="item-tilte">
-                                        <h2>Phone</h2>
-                                    </div>
-                                    <div class="item-content">
-                                        +00 000 000 0000
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 sm-m-b-30">
-                                <div class="info-item">
-                                    <div class="item-tilte">
-                                        <h2>Opening Hours</h2>
-                                    </div>
-                                    <div class="item-content">
-                                        <p>Monday to Friday</p>
-                                        <p>9:00 &ndash; 19:00</p>
-                                        <p>Saturday 10:00 &ndash; 17:00</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="info-item">
-                                    <div class="item-tilte">
-                                        <h2>Address</h2>
+                                        <h2>{{ page_t.summer.title }}</h2>
                                     </div>
                                     <div class="item-content small-width">
-                                        Street Name 123<br>City, Country
+                                        {% for p in page_t.summer.paragraphs %}<p>{{ p }}</p>{% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-item">
+                                    <div class="item-tilte">
+                                        <h2>{{ page_t.winter.title }}</h2>
+                                    </div>
+                                    <div class="item-content small-width">
+                                        {% for p in page_t.winter.paragraphs %}<p>{{ p }}</p>{% endfor %}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <p class="text-center m-t-30"><em>{{ page_t.closing }}</em></p>
                     </div>
                 </div>
             </div>
@@ -73,8 +64,8 @@ show_title_bar: true
             <div class="block block-contact-form">
                 <div class="block-widget-wrap">
                     <div class="block-title">
-                        <h2>Send Us Your Questions!</h2>
-                        <div class="sub-title">We&rsquo;ll get back to you within two days.</div>
+                        <h2>{{ page_t.form.title }}</h2>
+                        <div class="sub-title">{{ page_t.form.subtitle }}</div>
                     </div>
                     <div class="block-content">
                         {%- comment -%}
@@ -86,13 +77,13 @@ show_title_bar: true
                             <div class="contact-us-form">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-6">
-                                        <label class="required">Name</label><br>
+                                        <label class="required">{{ page_t.form.name }}</label><br>
                                         <span class="form-control-wrap">
                                             <input type="text" name="name" value="" size="40" class="form-control" aria-required="true">
                                         </span>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
-                                        <label class="required">Email</label><br>
+                                        <label class="required">{{ page_t.form.email }}</label><br>
                                         <span class="form-control-wrap">
                                             <input type="email" name="email" value="" size="40" class="form-control" aria-required="true">
                                         </span>
@@ -100,14 +91,14 @@ show_title_bar: true
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <label class="required">Message</label><br>
+                                        <label class="required">{{ page_t.form.message }}</label><br>
                                         <span class="form-control-wrap">
                                             <textarea name="message" cols="40" rows="10" class="form-control" aria-required="true"></textarea>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="form-button">
-                                    <input type="submit" value="Submit" class="button">
+                                    <input type="submit" value="{{ page_t.form.submit }}" class="button">
                                 </div>
                             </div>
                         </form>

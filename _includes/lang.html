@@ -1,0 +1,36 @@
+{%- comment -%}
+Language-aware variables for templates.
+
+The jekyll-multiple-languages-plugin does NOT rewrite site.baseurl per language
+in this setup — `relative_url` always prepends the root baseurl ("/stefanini-jewerly"),
+so links built with `'/about.html' | relative_url` resolve to the English page
+even when rendering the Italian build. To produce per-language links, prepend
+`lang_base` (defined below) manually instead of using `relative_url`.
+
+Vars exported:
+  active        — current language code
+  default_lang  — site default
+  t             — site.data.i18n[active] translation tree
+  other_lang    — the other language code
+  lang_base     — baseurl for current language pages (e.g. "/stefanini-jewerly"
+                  for EN, "/stefanini-jewerly/it" for IT). Build links as
+                  `{{ lang_base }}/about.html`, `{{ lang_base }}/` for home.
+  other_url     — fully-qualified path to the home of the other language
+                  (use directly as href — do NOT pipe through relative_url)
+{%- endcomment -%}
+{%- assign active = site.lang | default: site.default_lang -%}
+{%- assign default_lang = site.default_lang | default: site.lang -%}
+{%- assign t = site.data.i18n[active] -%}
+{%- assign other_lang = "" -%}
+{%- for l in site.languages -%}{%- if l != active -%}{%- assign other_lang = l -%}{%- endif -%}{%- endfor -%}
+{%- assign baseurl_root = site.baseurl_root | default: site.baseurl -%}
+{%- if active == default_lang -%}
+  {%- assign lang_base = baseurl_root -%}
+{%- else -%}
+  {%- assign lang_base = baseurl_root | append: "/" | append: active -%}
+{%- endif -%}
+{%- if other_lang == default_lang -%}
+  {%- assign other_url = baseurl_root | append: "/" -%}
+{%- else -%}
+  {%- assign other_url = baseurl_root | append: "/" | append: other_lang | append: "/" -%}
+{%- endif -%}

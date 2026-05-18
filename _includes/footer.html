@@ -1,17 +1,17 @@
+{% include lang.html %}
 <footer id="site-footer" class="site-footer">
     <div class="footer">
         <div class="section-padding">
             <div class="section-container">
                 <div class="block-widget-wrap text-center">
                     <div class="block block-image m-b-20">
-                        <a href="{{ '/' | relative_url }}">
+                        <a href="{{ lang_base }}/">
                             <img width="100" src="{{ '/media/logo.png' | relative_url }}" alt="{{ site.title }}">
                         </a>
                     </div>
                     <div class="block block-social">
                         <ul class="social-link">
-                            <li><a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/stefaninijewellery" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
         <div class="section-padding">
             <div class="section-container">
                 <div class="block-widget-wrap">
-                    <p class="copyright text-center">Copyright &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All Rights Reserved.</p>
+                    <p class="copyright text-center">Copyright &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. {{ t.footer.copyright }}</p>
                 </div>
             </div>
         </div>
